@@ -1,0 +1,120 @@
+.home {
+  .inner {
+    display: flex;
+
+    padding-top: 150px;
+
+    .left,
+    .right {
+      width: 50%;
+    }
+
+    .left {
+      padding-right: 75px;
+      padding-bottom: 150px;
+
+      .hello,
+      .name {
+        font-family: "NEXT ART";
+      }
+
+      .hello {
+        font-size: 48px;
+        font-weight: 600;
+      }
+
+      .name {
+        font-size: 72px;
+        font-weight: 700;
+
+        margin: 10px 0 27px 0;
+      }
+
+      .description {
+        margin-bottom: 27px;
+        padding-right: 50px;
+      }
+    }
+
+    .right {
+      position: relative;
+
+      .circle {
+        position: relative;
+
+        width: 575px;
+        height: 575px;
+        border-radius: 575px;
+        border: 67px solid var(--blu, #00c4f0);
+        box-shadow: 0px 0px 152px 0px rgba(0, 196, 240, 0.42);
+
+        > .skill-circle {
+          position: relative;
+          z-index: 1;
+
+          width: 90px;
+          height: 90px;
+
+          border-radius: 50%;
+
+          background: linear-gradient(131deg, #414141 0%, #2d2d2d 100.52%);
+
+          &:nth-child(1) {
+            top: -45px;
+            left: -11px;
+          }
+
+          &:nth-child(2) {
+            top: 51px;
+            left: -110px;
+          }
+
+          &:nth-child(3) {
+            top: 171px;
+            left: -51px;
+          }
+
+          &:nth-child(4) {
+            top: -322.9px;
+            left: 353px;
+          }
+
+          span {
+            color: #00c4f0;
+            font-family: "NEXT ART";
+            font-size: 36px;
+            font-weight: 700;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      .me {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+
+        width: 620px;
+        height: auto;
+
+        filter: brightness(1.2);
+      }
+
+      .smail {
+        position: absolute;
+        top: -156px;
+        left: 80px;
+        z-index: 2;
+
+        width: 390px;
+        height: auto;
+
+        transform: rotateZ(351deg);
+      }
+    }
+  }
+}
