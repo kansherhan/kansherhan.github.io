@@ -50,15 +50,11 @@ body {
   font-size: 18px;
   font-weight: 300;
   font-family: "Raleway", sans-serif;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100vw;
   color: #e4e4e4;
   background: linear-gradient(102deg, #2c2c2c 1.56%, #1c1c1c 95.55%);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-img {
-  pointer-events: none;
 }
 
 .container {
@@ -141,51 +137,37 @@ img {
   background: linear-gradient(131deg, #414141 0%, #2d2d2d 100.52%);
 }
 .footer .inner {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
   font-size: 16px;
-  padding: 50px 0;
+  padding: 20px 50px;
 }
-.footer .inner .navigation,
-.footer .inner .contacts,
-.footer .inner .copyright {
+.footer .inner .contacts {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
-.footer .inner .navigation span,
-.footer .inner .navigation a,
-.footer .inner .contacts span,
-.footer .inner .contacts a,
-.footer .inner .copyright span,
-.footer .inner .copyright a {
+.footer .inner .contacts a {
+  display: flex;
+  align-items: center;
   color: inherit;
   text-decoration: none;
-  margin-bottom: 18px;
 }
-.footer .inner .navigation span:last-child,
-.footer .inner .navigation a:last-child,
-.footer .inner .contacts span:last-child,
-.footer .inner .contacts a:last-child,
-.footer .inner .copyright span:last-child,
-.footer .inner .copyright a:last-child {
-  margin-bottom: 0;
+.footer .inner .contacts a ion-icon {
+  margin-right: 10px;
 }
-.footer .inner .navigation a:hover,
-.footer .inner .contacts a:hover,
-.footer .inner .copyright a:hover {
+.footer .inner .contacts a:hover {
   text-decoration: underline;
 }
-.footer .inner .copyright .logo {
-  margin-bottom: 30px;
-}
-.footer .inner .copyright .logo span {
-  font-size: 18px;
-  font-family: "Kaushan Script", cursive;
+@media (max-width: 576px) {
+  .footer .inner .contacts {
+    flex-direction: column;
+  }
+  .footer .inner .contacts a {
+    margin-bottom: 10px;
+  }
 }
 
 .main .home .inner {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 150px;
 }
 .main .home .inner .left,
@@ -267,13 +249,29 @@ img {
   filter: brightness(1.2);
 }
 .main .home .inner .right .smail {
-  position: absolute;
-  top: -156px;
-  left: 80px;
   z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 10px;
   width: 390px;
   height: auto;
-  transform: rotateZ(351deg);
+  transform: translate(-50%, -50%) translate(-28px, 25px) rotateZ(351deg);
+}
+@media (max-width: 1200px) {
+  .main .home .inner .left,
+  .main .home .inner .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .main .home .inner .left {
+    padding-left: 75px;
+  }
+  .main .home .inner .left .name {
+    text-align: center;
+  }
 }
 .main .about {
   background: linear-gradient(131deg, #414141 0%, #2d2d2d 100.52%);
@@ -283,7 +281,7 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   gap: 35px;
-  padding-top: 115px;
+  padding: 75px 0;
 }
 .main .about .inner .skills .item {
   display: flex;
@@ -297,10 +295,10 @@ img {
   width: 200px;
   height: 200px;
 }
-.main .about .inner .skills .item img {
+.main .about .inner .skills .item ion-icon {
+  font-size: 64px;
+  color: #00c4f0;
   margin-bottom: 33px;
-  width: auto;
-  max-height: 50px;
 }
 .main .about .inner .skills .item span.icon {
   display: block;
@@ -314,6 +312,11 @@ img {
   font-size: 14px;
   font-weight: 700;
   font-family: "NEXT ART";
+}
+@media (max-width: 1200px) {
+  .main .about .inner .skills {
+    padding: 75px;
+  }
 }
 .main .about .inner .me {
   display: flex;

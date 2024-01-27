@@ -1,6 +1,7 @@
 .home {
   .inner {
     display: flex;
+    flex-wrap: wrap;
 
     padding-top: 150px;
 
@@ -105,15 +106,39 @@
       }
 
       .smail {
-        position: absolute;
-        top: -156px;
-        left: 80px;
+        // position: absolute;
+        // top: -156px;
+        // left: 80px;
         z-index: 2;
+
+        position: absolute;
+        left: 50%;
+        top: 10px;
 
         width: 390px;
         height: auto;
 
-        transform: rotateZ(351deg);
+        transform: translate(-50%, -50%) translate(-28px, 25px) rotateZ(351deg);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .left,
+      .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        width: 100%;
+      }
+
+      .left {
+        padding-left: 75px;
+
+        .name {
+          text-align: center;
+        }
       }
     }
   }

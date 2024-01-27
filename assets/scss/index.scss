@@ -20,14 +20,13 @@ body {
   font-weight: 300;
   font-family: "Raleway", sans-serif;
 
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  width: 100vw;
+
   color: #e4e4e4;
   background: linear-gradient(102deg, #2c2c2c 1.56%, #1c1c1c 95.55%);
-
-  user-select: none;
-}
-
-img {
-  pointer-events: none;
 }
 
 .container {

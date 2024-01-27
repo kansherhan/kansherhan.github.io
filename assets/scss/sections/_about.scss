@@ -8,7 +8,7 @@
       flex-wrap: wrap;
       gap: 35px;
 
-      padding-top: 115px;
+      padding: 75px 0;
 
       .item {
         display: flex;
@@ -25,11 +25,11 @@
         width: 200px;
         height: 200px;
 
-        img {
-          margin-bottom: 33px;
+        ion-icon {
+          font-size: 64px;
+          color: #00c4f0;
 
-          width: auto;
-          max-height: 50px;
+          margin-bottom: 33px;
         }
 
         span {
@@ -52,6 +52,10 @@
             font-family: "NEXT ART";
           }
         }
+      }
+
+      @media (max-width: 1200px) {
+        padding: 75px;
       }
     }
 

@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
     type: "loop",
     perPage: 1,
     autoplay: true,
-    interval: 3500,
+    interval: 5000,
   });
 
   splide.mount();
