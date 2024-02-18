@@ -2,63 +2,6 @@
   background: linear-gradient(131deg, #414141 0%, #2d2d2d 100.52%);
 
   .inner {
-    .skills {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 35px;
-
-      padding: 75px 0;
-
-      .item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        padding: 15px;
-
-        border-radius: 6px;
-        background: #2a2a2a;
-        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
-
-        width: 200px;
-        height: 200px;
-
-        ion-icon {
-          font-size: 64px;
-          color: #00c4f0;
-
-          margin-bottom: 33px;
-        }
-
-        span {
-          &.icon {
-            display: block;
-
-            margin-bottom: 33px;
-
-            font-size: 36px;
-            font-weight: 700;
-
-            color: #00c4f0;
-          }
-
-          &.text {
-            text-align: center;
-
-            font-size: 14px;
-            font-weight: 700;
-            font-family: "NEXT ART";
-          }
-        }
-      }
-
-      @media (max-width: 1200px) {
-        padding: 75px;
-      }
-    }
-
     .me {
       display: flex;
       justify-content: center;
