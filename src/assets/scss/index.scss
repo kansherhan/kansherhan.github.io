@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wdth,wght@75..100,400..900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: "Tektur", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 18px;
+
+  color: #212427;
+
+  background-image: url("/background.png");
+  background-size: 100px;
+
+  overflow-x: visible;
+
+  @media (max-width: 768px) {
+    overflow-x: hidden;
+  }
+}
+
+@mixin inner-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header-inner-container {
+  @include inner-container;
+}
+
+.inner-container {
+  @include inner-container;
+
+  @media (max-width: 768px) {
+    padding: 0 30px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
