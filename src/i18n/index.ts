@@ -21,6 +21,13 @@ const resources = {
         wantToChat: "Want to know more or just chat?",
         youAreWelcome: "You are welcome!",
       },
+      aboutMe: {
+        texts: [
+          "I am an experienced Frontend developer with over 3 years of experience in creating modern web applications. I specialize in React, TypeScript and modern frameworks, with strong skills in UI/UX design and creating responsive interfaces.",
+          "I constantly learn new technologies and follow best development practices. I love solving complex problems and creating innovative solutions, working effectively both independently and in a team.",
+          "I have extensive experience working with various APIs and third-party services. I pay special attention to performance and code optimization, which allows me to create fast and reliable applications.",
+        ],
+      },
     },
   },
   ru: {
@@ -42,6 +49,13 @@ const resources = {
         wantToChat: "Хотите узнать больше или просто пообщаться?",
         youAreWelcome: "Вы приветствуете!",
       },
+      aboutMe: {
+        texts: [
+          "Я опытный Frontend разработчик с более чем 3-летним стажем в создании современных веб-приложений. Специализируюсь на React, TypeScript и современных фреймворках, имею сильные навыки в UI/UX дизайне и создании отзывчивых интерфейсов.",
+          "Постоянно изучаю новые технологии и следую лучшим практикам разработки. Люблю решать сложные задачи и создавать инновационные решения, эффективно работая как самостоятельно, так и в команде.",
+          "Имею обширный опыт работы с различными API и сторонними сервисами. Уделяю особое внимание производительности и оптимизации кода, что позволяет создавать быстрые и надежные приложения.",
+        ],
+      },
     },
   },
   kz: {
@@ -62,6 +76,13 @@ const resources = {
         sendMessage: "Хабарлама жіберу",
         wantToChat: "Біздің туралы білгіңіз келе ме?",
         youAreWelcome: "Сізге сәлем!",
+      },
+      aboutMe: {
+        texts: [
+          "Мен 3 жылдан астам тәжірибесі бар Frontend әзірлеуші, заманауи веб-қосымшаларды құрумен айналысамын. React, TypeScript және заманауи фреймворктарға маманданамын, UI/UX дизайн және интерактивті интерфейстер жасауда мықты дағдыларым бар.",
+          "Үнемі жаңа технологияларды үйреніп, әзірлеудің үздік тәжірибелерін қолданамын. Күрделі мәселелерді шешуді және инновациялық шешімдер жасауды ұнатамын, жеке де, команда құрамында да тиімді жұмыс істей аламын.",
+          "Әртүрлі API-лармен және сыртқы сервистермен жұмыс істеуде үлкен тәжірибем бар. Кодтың өнімділігі мен оңтайландыруына ерекше көңіл бөлемін, бұл жылдам және сенімді қосымшалар жасауға мүмкіндік береді.",
+        ],
       },
     },
   },

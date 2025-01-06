@@ -215,7 +215,7 @@ export const App: FC = () => {
 
       <section
         id="home"
-        className="profile container bg:#ffffff p:50px|0|100px|0"
+        className="profile container bg:#ffffff p:50px|0|30px|0 p:50px|0|100px|0@md"
       >
         <div className="inner-container">
           <div className="profile-info flex flex:col">
@@ -232,33 +232,39 @@ export const App: FC = () => {
             </p>
           </div>
 
-          <div className="profile-image mt:50px">
+          <div className="profile-image-container mt:50px">
             <img
-              src="/profile.jpg"
+              src="/profile.jpeg"
               alt="profile"
-              className="w:full h:400px obj:cover"
+              className="profile-image w:full h:450px obj:cover"
             />
           </div>
         </div>
       </section>
 
-      <section id="about" className="container bg:#F6F6F6 p:100px|0">
+      <section
+        id="about"
+        className="container bg:#F6F6F6 p:60px|0 p:100px|0@md"
+      >
         <div className="inner-container flex flex:col ai:center jc:center">
           <h2 className="section-title f:32px mb:50px">{t("header.about")}</h2>
 
           <div className="flex flex:col ai:center jc:center gap:25px">
-            <p>Hi, I'm Denis – UX/UI designer from Minsk.</p>
-            <p>I'm interested in design and everything connected with it.</p>
-            <p>
-              I'm studying at courses "Web and mobile design interfaces" in
-              IT-Academy.
-            </p>
-            <p>Ready to implement excellent projects with wonderful people.</p>
+            {(t("aboutMe.texts", { returnObjects: true }) as string[]).map(
+              (text) => (
+                <p key={text} className="text:center">
+                  {text}
+                </p>
+              )
+            )}
           </div>
         </div>
       </section>
 
-      <section id="skills" className="container bg:#ffffff p:100px|0">
+      <section
+        id="skills"
+        className="container bg:#ffffff p:60px|0 p:100px|0@md"
+      >
         <div className="inner-container">
           <h2 className="section-title text:center f:32px mb:30px">
             {t("header.skills")}
@@ -297,7 +303,10 @@ export const App: FC = () => {
         </div>
       </section>
 
-      <section id="portfolio" className="container bg:#F6F6F6 p:100px|0">
+      <section
+        id="portfolio"
+        className="container bg:#F6F6F6 p:60px|0 p:100px|0@md"
+      >
         <div className="inner-container flex flex:col ai:center jc:center">
           <h2 className="section-title text:center f:32px mb:30px">
             {t("header.portfolio")}
@@ -327,7 +336,10 @@ export const App: FC = () => {
         </div>
       </section>
 
-      <section id="contact" className="container bg:#ffffff p:100px|0">
+      <section
+        id="contact"
+        className="container bg:#ffffff p:60px|0 p:100px|0@md"
+      >
         <div className="inner-container flex flex:col ai:center jc:center">
           <h2 className="section-title text:center f:32px mb:30px">
             {t("header.contact")}
