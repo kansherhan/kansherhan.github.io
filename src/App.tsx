@@ -11,6 +11,7 @@ import {
 import { IoMdClose } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import { TfiMenu } from "react-icons/tfi";
+import { HiDocumentText } from "react-icons/hi2";
 
 interface INavItem {
   nameTranslationKey: string;
@@ -27,13 +28,12 @@ interface ISkillItem {
   name: string;
   icon: string;
   rating: number; // 1 - 5
-  description: string;
 }
 
 interface IPortfolioItem {
   title: string;
-  description: string;
-  image: string;
+  imageUrl: string;
+  descriptionTranslateKey: string;
 }
 
 enum Languages {
@@ -49,53 +49,97 @@ export const App: FC = () => {
 
   const portfolio: IPortfolioItem[] = [
     {
-      title: "Online fashion store - Homepage",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      image: "/portfolio/1.jpg",
+      title: "KSU VashDomofon",
+      imageUrl: "/portfolio/vd.png",
+      descriptionTranslateKey: "ksu",
     },
     {
-      title: "Reebok Store - Concept",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      image: "/portfolio/2.png",
+      title: "JuriChat",
+      imageUrl: "/portfolio/jurichat.png",
+      descriptionTranslateKey: "jurichat",
     },
     {
-      title: "Braun Landing Page - Concept",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      image: "/portfolio/3.png",
+      title: "Diabetics HUB",
+      imageUrl: "/portfolio/diabetics-hub.png",
+      descriptionTranslateKey: "dhub",
+    },
+    {
+      title: "IStudent",
+      imageUrl: "/portfolio/istudent.png",
+      descriptionTranslateKey: "istudent",
     },
   ];
 
   const skills: ISkillItem[] = [
     {
-      name: "Photoshop",
-      icon: "/svg/skills/photoshop.svg",
+      name: "C# (CSharp)",
+      icon: "/svg/skills/csharp.svg",
       rating: 5,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     },
     {
-      name: "Adobe Illustrator",
-      icon: "/svg/skills/adobe-illustrator.svg",
-      rating: 3,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      name: "Vue.js",
+      icon: "/svg/skills/vuejs.svg",
+      rating: 5,
     },
     {
-      name: "Figma",
-      icon: "/svg/skills/figma.svg",
+      name: "React.js",
+      icon: "/svg/skills/react.svg",
+      rating: 5,
+    },
+    {
+      name: "Nest.js",
+      icon: "/svg/skills/nest.svg",
+      rating: 5,
+    },
+    {
+      name: "JavaScript",
+      icon: "/svg/skills/js.svg",
+      rating: 5,
+    },
+    {
+      name: "TypeScript",
+      icon: "/svg/skills/ts.svg",
+      rating: 5,
+    },
+    {
+      name: "Sass",
+      icon: "/svg/skills/sass.svg",
+      rating: 5,
+    },
+    {
+      name: "PHP",
+      icon: "/svg/skills/php.svg",
+      rating: 5,
+    },
+    {
+      name: "Laravel",
+      icon: "/svg/skills/laravel.svg",
       rating: 4,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
     },
     {
-      name: "Adobe Effect",
-      icon: "/svg/skills/adobe-effect.svg",
+      name: "PostgreSQL",
+      icon: "/svg/skills/postgresql.svg",
+      rating: 4,
+    },
+    {
+      name: "Python",
+      icon: "/svg/skills/python.svg",
+      rating: 5,
+    },
+    {
+      name: "Go",
+      icon: "/svg/skills/go.svg",
       rating: 3,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    },
+    {
+      name: "Docker",
+      icon: "/svg/skills/docker.svg",
+      rating: 4,
+    },
+    {
+      name: "Flutter",
+      icon: "/svg/skills/flutter.svg",
+      rating: 4,
     },
   ];
 
@@ -114,6 +158,11 @@ export const App: FC = () => {
       link: "mailto:kansherhan@gmail.com",
       icon: MdEmail,
       activeColor: "#fbbc04",
+    },
+    {
+      link: "https://kansherhan.github.io/resume",
+      icon: HiDocumentText,
+      activeColor: "#42c501",
     },
     {
       link: "https://www.linkedin.com/in/kansherhan",
@@ -200,7 +249,7 @@ export const App: FC = () => {
                     }
                     onClick={() =>
                       i18n.changeLanguage(
-                        Languages[lang as keyof typeof Languages]
+                        Languages[lang as keyof typeof Languages],
                       )
                     }
                   >
@@ -255,7 +304,7 @@ export const App: FC = () => {
                 <p key={text} className="text:center">
                   {text}
                 </p>
-              )
+              ),
             )}
           </div>
         </div>
@@ -266,13 +315,13 @@ export const App: FC = () => {
         className="container bg:#ffffff p:60px|0 p:100px|0@md"
       >
         <div className="inner-container">
-          <h2 className="section-title text:center f:32px mb:30px">
+          <h2 className="section-title text:center f:32px mb:15px">
             {t("header.skills")}
           </h2>
 
-          <p className="text:center mb:50px">I work in such programs as</p>
+          <p className="text:center mb:50px">{t("skills.description")}</p>
 
-          <div className="skills-list flex flex:row ai:center jc:space-evenly gap:40px|30px flex:wrap">
+          <div className="skills-list flex flex:row ai:center jc:space-between@md jc:space-around gap:40px|30px flex:wrap">
             {skills.map((item) => (
               <div
                 key={item.name}
@@ -281,19 +330,19 @@ export const App: FC = () => {
                 <img
                   src={item.icon}
                   alt={item.name}
-                  className="skills-list-item-icon"
+                  className="skills-list-item-icon h:100px@md w:100px@md h:75 w:75"
                 />
 
                 <p className="skills-list-item-name f:bold">{item.name}</p>
 
-                <p className="skills-list-item-description f:12px f:#828282 lh:1.2 text:center">
-                  {item.description}
-                </p>
-
                 <div className="skills-list-item-rating flex flex:row ai:center gap:5px">
                   {Array.from({ length: 5 }, (_, index) => (
                     <div key={index} className="skills-list-item-rating-item">
-                      {index < item.rating ? <FaStar /> : <FaRegStar />}
+                      {index < item.rating ? (
+                        <FaStar size={14} />
+                      ) : (
+                        <FaRegStar size={14} />
+                      )}
                     </div>
                   ))}
                 </div>
@@ -312,22 +361,22 @@ export const App: FC = () => {
             {t("header.portfolio")}
           </h2>
 
-          <div className="portfolio-list flex flex:col ai:center jc:space-evenly gap:50px">
+          <div className="portfolio-list flex flex:col ai:center jc:space-evenly gap:55px">
             {portfolio.map((item) => (
-              <div key={item.title} className="portfolio-list-item">
+              <div key={item.title} className="portfolio-list-item w:full">
                 <img
-                  src={item.image}
+                  src={item.imageUrl}
                   alt={item.title}
-                  className="portfolio-list-item-image w:full h:auto obj:cover mb:30px border:1px|solid|#212427"
+                  className="portfolio-list-item-image w:full h:auto h:500px@md obj:fill obj:top mb:20px border:1px|solid|#212427"
                 />
 
                 <div className="portfolio-list-item-info">
-                  <p className="portfolio-list-item-title text:center mb:15px f:bold f:24px">
+                  <p className="portfolio-list-item-title text:center mb:10px f:bold f:24px">
                     {item.title}
                   </p>
 
-                  <p className="portfolio-list-item-description text:center">
-                    {item.description}
+                  <p className="portfolio-list-item-description text:center opacity:0.8">
+                    {t(`portfolio.${item.descriptionTranslateKey}`)}
                   </p>
                 </div>
               </div>
@@ -341,13 +390,11 @@ export const App: FC = () => {
         className="container bg:#ffffff p:60px|0 p:100px|0@md"
       >
         <div className="inner-container flex flex:col ai:center jc:center">
-          <h2 className="section-title text:center f:32px mb:30px">
+          <h2 className="section-title text:center f:32px mb:20px">
             {t("header.contact")}
           </h2>
 
-          <p className="text:center mb:5px">{t("contact.wantToChat")}</p>
-
-          <p className="text:center mb:30px">{t("contact.youAreWelcome")}</p>
+          <p className="text:center mb:30px">{t("contact.wantToChat")}</p>
 
           <a
             href="https://t.me/kansherhan?text=Hello Bro"

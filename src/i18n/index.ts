@@ -16,20 +16,33 @@ const resources = {
         profession: "Frontend Developer and Software Engineer",
         age: "20 years old",
       },
+      skills: {
+        description:
+          "Here are the technologies that help me bring my ideas to life",
+      },
+      portfolio: {
+        ksu: "Business tracking system, graphs, statistics and reports",
+        jurichat:
+          "Website for obtaining legal assistance using artificial intelligence",
+        dhub: "A website for helping people with diabetes",
+        istudent:
+          "A service for the university, for student interaction and feedback",
+      },
       contact: {
         sendMessage: "Send Message",
-        wantToChat: "Want to know more or just chat?",
-        youAreWelcome: "You are welcome!",
+        wantToChat: "Do you want to learn more or just chat?",
       },
       aboutMe: {
         texts: [
-          "I am an experienced Frontend developer with over 3 years of experience in creating modern web applications. I specialize in React, TypeScript and modern frameworks, with strong skills in UI/UX design and creating responsive interfaces.",
-          "I constantly learn new technologies and follow best development practices. I love solving complex problems and creating innovative solutions, working effectively both independently and in a team.",
-          "I have extensive experience working with various APIs and third-party services. I pay special attention to performance and code optimization, which allows me to create fast and reliable applications.",
+          "I am a frontend and backend developer with 3 years of experience in web development. I build applications using React, TypeScript, Redux, TanStack Query, and Formik on the frontend and NestJS, FastAPI, Go, and PostgreSQL on the backend. I manage service interactions through Nginx and containerize applications using Docker.",
+          "I have worked on numerous projects incorporating machine learning, automation, and security technologies.",
+          "Previously, I taught web development, conducting a 12-week course covering HTML, CSS, JavaScript, React, Nest.js, and Docker.",
+          "I graduated from Satbayev University. I am passionate about AI, full-stack development, and building scalable systems.",
         ],
       },
     },
   },
+
   ru: {
     translation: {
       header: {
@@ -39,31 +52,44 @@ const resources = {
         portfolio: "Мои проекты",
         contact: "Контакты",
       },
+      skills: {
+        description:
+          "Вот технологии, которые помогают мне воплощать идеи в жизнь",
+      },
       info: {
         fullName: "Кантаев Шерхан",
         profession: "Frontend Developer и Software Engineer",
         age: "20 лет",
       },
+      portfolio: {
+        ksu: "Система для слежения за бизнесом, графики, статистика и отчеты",
+        jurichat:
+          "Сайт для получения юридической помощи с использованием искусственного интеллекта",
+        dhub: "Сайт для помощи людей которые страдают диабетом",
+        istudent:
+          "Сервис для университета, предназначенный для взаимодействия со студентами и получения обратной связи",
+      },
       contact: {
         sendMessage: "Отправить сообщение",
         wantToChat: "Хотите узнать больше или просто пообщаться?",
-        youAreWelcome: "Вы приветствуете!",
       },
       aboutMe: {
         texts: [
-          "Я опытный Frontend разработчик с более чем 3-летним стажем в создании современных веб-приложений. Специализируюсь на React, TypeScript и современных фреймворках, имею сильные навыки в UI/UX дизайне и создании отзывчивых интерфейсов.",
-          "Постоянно изучаю новые технологии и следую лучшим практикам разработки. Люблю решать сложные задачи и создавать инновационные решения, эффективно работая как самостоятельно, так и в команде.",
-          "Имею обширный опыт работы с различными API и сторонними сервисами. Уделяю особое внимание производительности и оптимизации кода, что позволяет создавать быстрые и надежные приложения.",
+          "Я — фронтенд- и бэкенд-разработчик с 3-летним опытом в веб-разработке. Разрабатываю приложения с использованием React, TypeScript, Redux, TanStack Query, Formik на фронтенде и NestJS, FastAPI, Go, PostgreSQL на бэкенде. Организую взаимодействие сервисов через Nginx и контейнеризую приложения с помощью Docker.",
+          "У меня множество проектов, в которых применяются современные технологии, включая машинное обучение, автоматизацию и безопасность.",
+          "Ранее преподавал веб-разработку, проводя 12-недельный курс, где обучал HTML, CSS, JavaScript, React, Nest.js и Docker.",
+          "Закончил Satbayev University. Увлекаюсь AI, full-stack разработкой и созданием масштабируемых систем.",
         ],
       },
     },
   },
+
   kz: {
     translation: {
       header: {
         home: "Басты бет",
-        about: "Мен жайым",
-        skills: "Менің білімдерім",
+        about: "Мен жайлы",
+        skills: "Менің дағдыларым",
         portfolio: "Менің жұмыстарым",
         contact: "Байланыс",
       },
@@ -72,16 +98,28 @@ const resources = {
         profession: "Frontend Developer және Software Engineer",
         age: "20 жас",
       },
+      skills: {
+        description:
+          "Міне, маған идеяларды жүзеге асыруға көмектесетін технологиялар",
+      },
+      portfolio: {
+        ksu: "Бизнесті бақылау жүйесі, кестелер, статистика және есептер",
+        jurichat:
+          "Жасанды интеллектті қолдана отырып заңгерлік көмек алуға арналған сайт",
+        dhub: "Қант диабетімен ауыратын адамдарға көмектесетін сайт",
+        istudent:
+          "Студенттермен өзара әрекеттесуге және кері байланыс алуға арналған университет қызметі",
+      },
       contact: {
         sendMessage: "Хабарлама жіберу",
-        wantToChat: "Біздің туралы білгіңіз келе ме?",
-        youAreWelcome: "Сізге сәлем!",
+        wantToChat: "Көбірек білгіңіз келе ме, әлде жай сөйлескіңіз келе ме?",
       },
       aboutMe: {
         texts: [
-          "Мен 3 жылдан астам тәжірибесі бар Frontend әзірлеуші, заманауи веб-қосымшаларды құрумен айналысамын. React, TypeScript және заманауи фреймворктарға маманданамын, UI/UX дизайн және интерактивті интерфейстер жасауда мықты дағдыларым бар.",
-          "Үнемі жаңа технологияларды үйреніп, әзірлеудің үздік тәжірибелерін қолданамын. Күрделі мәселелерді шешуді және инновациялық шешімдер жасауды ұнатамын, жеке де, команда құрамында да тиімді жұмыс істей аламын.",
-          "Әртүрлі API-лармен және сыртқы сервистермен жұмыс істеуде үлкен тәжірибем бар. Кодтың өнімділігі мен оңтайландыруына ерекше көңіл бөлемін, бұл жылдам және сенімді қосымшалар жасауға мүмкіндік береді.",
+          "Мен 3 жылдық тәжірибесі бар фронтенд және бэкенд әзірлеушімін. Фронтендте React, TypeScript, Redux, TanStack Query, Formik, ал бэкендте NestJS, FastAPI, Go, PostgreSQL қолданамын. Қызметтер арасындағы өзара әрекетті Nginx арқылы басқарамын және қолданбаларды Docker көмегімен контейнерлеймін.",
+          "Машиналық оқыту, автоматтандыру және қауіпсіздік технологияларын қолданатын көптеген жобалармен жұмыс істедім.",
+          "Бұрын веб-әзірлеу бойынша сабақ бердім, 12 апталық курс өткізіп, HTML, CSS, JavaScript, React, Nest.js және Docker үйреттім.",
+          "Satbayev University бітірдім. Жасанды интеллектке, full-stack әзірлеуге және масштабталатын жүйелерді құруға қызығамын.",
         ],
       },
     },
