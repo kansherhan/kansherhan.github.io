@@ -283,7 +283,7 @@ export const App: FC = () => {
 
           <div className="profile-image-container mt:50px">
             <img
-              src="/profile.jpeg"
+              src="/profile.jpg"
               alt="profile"
               className="profile-image w:full h:450px obj:cover"
             />
