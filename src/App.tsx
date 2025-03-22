@@ -196,10 +196,10 @@ export const App: FC = () => {
 
   return (
     <div className="app">
-      <header className="fixed static@md header container bg:#ffffff00 bg:#ffffff@md h:100vh h:auto@md w:full z-index:100">
+      <header className="fixed pointer-events:none pointer-events:all@md static@md header container bg:#ffffff00 bg:#ffffff@md h:100vh h:auto@md w:full z-index:100">
         <div className="rel header-inner-container w:full h:full">
           <div
-            className="header-menu-wrapper abs top:30px right:-1px d:block d:none@md cursor:pointer bg:#ffffff z-index:101 p:10px|20px|10px|20px border:1px|solid|#212427"
+            className="header-menu-wrapper pointer-events:auto abs top:30px right:-1px d:block d:none@md cursor:pointer bg:#ffffff z-index:101 p:10px|20px|10px|20px border:1px|solid|#212427"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <TfiMenu className="header-menu f:24px" color="#212427" />
@@ -216,7 +216,7 @@ export const App: FC = () => {
                 <a
                   key={item.link}
                   href={item.link}
-                  className="header-nav-item cursor:pointer text:none f:#828282 f:#212427:hover f:semibold text:underline:hover"
+                  className="header-nav-item pointer-events:auto cursor:pointer text:none f:#828282 f:#212427:hover f:semibold text:underline:hover"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {t(item.nameTranslationKey)}
@@ -225,7 +225,7 @@ export const App: FC = () => {
             </nav>
 
             <div
-              className="abs top:30px right:30px d:block d:none@md cursor:pointer bg:#ffffff"
+              className="abs pointer-events:auto top:30px right:30px d:block d:none@md cursor:pointer bg:#ffffff"
               onClick={() => setIsMenuOpen(false)}
             >
               <IoMdClose className="f:30px" color="#212427" />
@@ -241,7 +241,7 @@ export const App: FC = () => {
 
                   <span
                     className={
-                      "profile-languages-item cursor:pointer f:bold.active" +
+                      "profile-languages-item pointer-events:auto cursor:pointer f:bold.active" +
                       (i18n.language ===
                       Languages[lang as keyof typeof Languages]
                         ? " active"
@@ -409,10 +409,11 @@ export const App: FC = () => {
               <a
                 href={item.link}
                 key={item.link}
-                className={`socials-item f:32px f:45px@md f:#212427 cursor:pointer scale(1.2):hover ~all|100ms|ease-in f:${item.activeColor}:hover`}
+                className={`socials-item block f:32px f:45px@md f:#212427 cursor:pointer scale(1.2):hover ~all|100ms|ease-in f:${item.activeColor}:hover`}
                 target="_blank"
+                aria-label="Перейти на сайт"
               >
-                <item.icon />
+                <item.icon style={{ pointerEvents: "none" }} />
               </a>
             ))}
           </div>
