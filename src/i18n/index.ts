@@ -34,7 +34,7 @@ const resources = {
       },
       aboutMe: {
         texts: [
-          "I am a frontend and backend developer with 3 years of experience in web development. I build applications using React, TypeScript, Redux, TanStack Query, and Formik on the frontend and NestJS, FastAPI, Go, and PostgreSQL on the backend. I manage service interactions through Nginx and containerize applications using Docker.",
+          "I am a frontend and backend developer with 2 years of experience in web development. I build applications using React, TypeScript, Redux, TanStack Query, and Formik on the frontend and NestJS, FastAPI, Go, and PostgreSQL on the backend. I manage service interactions through Nginx and containerize applications using Docker.",
           "I have worked on numerous projects incorporating machine learning, automation, and security technologies.",
           "Previously, I taught web development, conducting a 12-week course covering HTML, CSS, JavaScript, React, Nest.js, and Docker.",
           "I graduated from Satbayev University. I am passionate about AI, full-stack development, and building scalable systems.",
@@ -75,7 +75,7 @@ const resources = {
       },
       aboutMe: {
         texts: [
-          "Я — фронтенд- и бэкенд-разработчик с 3-летним опытом в веб-разработке. Разрабатываю приложения с использованием React, TypeScript, Redux, TanStack Query, Formik на фронтенде и NestJS, FastAPI, Go, PostgreSQL на бэкенде. Организую взаимодействие сервисов через Nginx и контейнеризую приложения с помощью Docker.",
+          "Я — фронтенд- и бэкенд-разработчик с 2-летним опытом в веб-разработке. Разрабатываю приложения с использованием React, TypeScript, Redux, TanStack Query, Formik на фронтенде и NestJS, FastAPI, Go, PostgreSQL на бэкенде. Организую взаимодействие сервисов через Nginx и контейнеризую приложения с помощью Docker.",
           "У меня множество проектов, в которых применяются современные технологии, включая машинное обучение, автоматизацию и безопасность.",
           "Ранее преподавал веб-разработку, проводя 12-недельный курс, где обучал HTML, CSS, JavaScript, React, Nest.js и Docker.",
           "Закончил Satbayev University. Увлекаюсь AI, full-stack разработкой и созданием масштабируемых систем.",
@@ -116,7 +116,7 @@ const resources = {
       },
       aboutMe: {
         texts: [
-          "Мен 3 жылдық тәжірибесі бар фронтенд және бэкенд әзірлеушімін. Фронтендте React, TypeScript, Redux, TanStack Query, Formik, ал бэкендте NestJS, FastAPI, Go, PostgreSQL қолданамын. Қызметтер арасындағы өзара әрекетті Nginx арқылы басқарамын және қолданбаларды Docker көмегімен контейнерлеймін.",
+          "Мен 2 жылдық тәжірибесі бар фронтенд және бэкенд әзірлеушімін. Фронтендте React, TypeScript, Redux, TanStack Query, Formik, ал бэкендте NestJS, FastAPI, Go, PostgreSQL қолданамын. Қызметтер арасындағы өзара әрекетті Nginx арқылы басқарамын және қолданбаларды Docker көмегімен контейнерлеймін.",
           "Машиналық оқыту, автоматтандыру және қауіпсіздік технологияларын қолданатын көптеген жобалармен жұмыс істедім.",
           "Бұрын веб-әзірлеу бойынша сабақ бердім, 12 апталық курс өткізіп, HTML, CSS, JavaScript, React, Nest.js және Docker үйреттім.",
           "Satbayev University бітірдім. Жасанды интеллектке, full-stack әзірлеуге және масштабталатын жүйелерді құруға қызығамын.",
