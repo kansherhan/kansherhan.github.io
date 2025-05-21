@@ -136,11 +136,6 @@ export const App: FC = () => {
       icon: "/svg/skills/docker.svg",
       rating: 4,
     },
-    {
-      name: "Flutter",
-      icon: "/svg/skills/flutter.svg",
-      rating: 4,
-    },
   ];
 
   const socials: ISocialItem[] = [
@@ -276,7 +271,6 @@ export const App: FC = () => {
               <span className="profile-description-item">
                 {t("info.profession")}
               </span>
-              <span className="profile-description-item">UI/UX Designer</span>
               <span className="profile-description-item">{t("info.age")}</span>
             </p>
           </div>
